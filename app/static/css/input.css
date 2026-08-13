@@ -1,1 +1,50 @@
 @import "tailwindcss";
+
+/* -----------------------------
+   Ambient background animation
+   ----------------------------- */
+
+@keyframes ambient-float {
+    0%, 100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate3d(80px, 40px, 0) scale(1.08);
+    }
+}
+
+.ambient-glow {
+    animation: ambient-float 12s ease-in-out infinite;
+}
+
+/* -----------------------------
+   Scroll reveal animation
+   ----------------------------- */
+
+.fade-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.fade-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Respect users who prefer reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+    .ambient-glow {
+        animation: none;
+    }
+
+    .fade-section {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
