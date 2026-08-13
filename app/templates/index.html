@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="dark">
 <head>
   <title>Prince Valencia</title>
   <link
@@ -7,13 +7,301 @@
     href="{{ url_for('static', filename='css/output.css') }}"
   >
 </head>
-<body>
-    <div>
-      <h1 class="text-4xl text-center mt-20 ">
-        Hello there
+<body class="font-sans bg-gray-900 text-slate-200">
+  <div
+    class="fixed inset-0 -z-10 overflow-hidden pointer-events-none"
+    aria-hidden="true"
+  >
+  <div
+    class="ambient-glow absolute
+      top-[-20%] left-[30%]
+      size-[500px]
+      rounded-full
+      bg-purple-500/20
+      blur-[120px]"
+  ></div>
+    <div
+      class="absolute
+        top-[50%] right-[-10%]
+        size-[400px]
+        rounded-full
+        bg-blue-500/10
+        blur-[120px]"
+    ></div>
+  </div>
+    <section
+      class="min-h-screen
+        flex
+        flex-col
+        items-center
+        justify-center
+        px-5"
+    >
+    <div class="text-center">
+      <h1 class="text-5xl md:text-6xl font-medium tracking-tight">
+        Prince Valencia
       </h1>
-    </div>
+      <h2
+        class="mt-6
+          max-w-2xl
+          text-xl
+          md:text-2xl
+          font-light
+          text-slate-300"
+      >
+        Full-Stack Developer building clean, practical
+        web applications.
+      </h2>
+      </div>
+      <!-- Social links -->
+      <div class="flex justify-center gap-5 mt-10">
+        <a
+          href="https://github.com/pogiiii"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          data-umami-event="github-social-hero"
+          class="transition-opacity duration-200 hover:opacity-60"
+        >
+          <svg
+            class="size-6 text-slate-200"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+          <path
+            d="M12 .297c-6.63 0-12 5.373-12 12
+            0 5.303 3.438 9.8 8.205 11.385
+            .6.113.82-.258.82-.577
+            0-.285-.01-1.04-.015-2.04
+            -3.338.724-4.042-1.61-4.042-1.61
+            C4.422 18.07 3.633 17.7 3.633 17.7
+            c-1.087-.744.084-.729.084-.729
+            1.205.084 1.838 1.236 1.838 1.236
+            1.07 1.835 2.809 1.305 3.495.998
+            .108-.776.417-1.305.76-1.605
+            -2.665-.3-5.466-1.332-5.466-5.93
+            0-1.31.465-2.38 1.235-3.22
+            -.135-.303-.54-1.523.105-3.176
+            0 0 1.005-.322 3.3 1.23
+            .96-.267 1.98-.399 3-.405
+            1.02.006 2.04.138 3 .405
+            2.28-1.552 3.285-1.23 3.285-1.23
+            .645 1.653.24 2.873.12 3.176
+            .765.84 1.23 1.91 1.23 3.22
+            0 4.61-2.805 5.625-5.475 5.92
+            .42.36.81 1.096.81 2.22
+            0 1.606-.015 2.896-.015 3.286
+            0 .315.21.69.825.57
+            C20.565 22.092 24 17.592 24 12.297
+            c0-6.627-5.373-12-12-12"
+          />
+          </svg>
+        </a>
+        <!-- LinkedIn -->
+        <a
+          href="https://linkedin.com/in/prince-valencia"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          data-umami-event="linkedin-social-hero"
+          class="transition-opacity duration-200 hover:opacity-60"
+        >
+          <svg
+            class="size-6 text-slate-200"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+          <path
+            d="M20.447 20.452h-3.554v-5.569
+            c0-1.328-.027-3.037-1.852-3.037
+            -1.853 0-2.136 1.445-2.136 2.939
+            v5.667H9.351V8.999h3.414v1.561h.046
+            c.477-.9 1.637-1.85 3.37-1.85
+            3.601 0 4.267 2.37 4.267 5.455
+            v6.287zM5.337 7.433a2.062 2.062 0 1 1
+            0-4.124 2.062 2.062 0 0 1 0 4.124z
+            M7.119 20.452H3.555V8.999h3.564v11.453z
+            M22.225 0H1.771C.792 0 0 .774 0 1.729
+            v20.542C0 23.227.792 24 1.771 24
+            h20.451C23.2 24 24 23.227 24 22.271
+            V1.729C24 .774 23.2 0 22.225 0z"
+          />
+          </svg>
+        </a>
+        <!-- Email -->
+        <a
+          href="mailto:princevalencia0504@gmail.com"
+          aria-label="Email"
+          data-umami-event="email-social-hero"
+          class="transition-opacity duration-200 hover:opacity-60"
+        >
+          <svg
+            class="size-6 text-slate-200"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+          <path
+            d="M24 5.457v13.909
+            c0 .904-.732 1.636-1.636 1.636
+            h-3.819V11.73L12 16.64l-6.545-4.91
+            v9.273H1.636A1.636 1.636 0 0 1 0 19.366
+            V5.457c0-2.023 2.309-3.178 3.927-1.964
+            L5.455 4.64 12 9.548l6.545-4.91
+            1.528-1.145C21.69 2.28 24 3.434 24 5.457z"
+          />
+          </svg>
+        </a>
+      </div>
+      <div class="absolute bottom-10 text-slate-400 animate-bounce">
+        ↓
+      </div>
+    </section>
+    <section
+      class="fade-section
+        min-h-screen
+        flex
+        items-center
+        justify-center
+        px-5"
+    >
+      <div class="max-w-2xl text-center">
+        <p class="text-sm uppercase tracking-[0.3em] text-slate-400">
+            About Me
+        </p>
+        <h2 class="mt-4 text-4xl font-medium">
+            Building things from backend to frontend.
+        </h2>
+        <p class="mt-8 text-lg leading-8 text-slate-400">
+          I'm a full-stack developer who enjoys building practical
+          applications and working across the entire stack — from
+          backend architecture and databases to frontend experiences.
+        </p>
+      </div>
+
+    </section>
+    <!--
+        ============================
+        Projects
+        ============================
+    -->
+    <section
+      class="fade-section
+        min-h-screen
+        px-5
+        py-32"
+    >
+      <div class="max-w-5xl mx-auto">
+        <p class="text-sm uppercase tracking-[0.3em] text-slate-400">
+          Projects
+        </p>
+        <h2 class="mt-4 text-4xl font-medium">
+          Things I've built.
+        </h2>
+        <div class="grid md:grid-cols-2 gap-6 mt-12">
+          <!-- Project 1 -->
+          <div
+            class="rounded-2xl
+              border border-slate-800
+              bg-slate-900/40
+              backdrop-blur-sm
+              p-8
+              transition
+              duration-300
+              hover:-translate-y-1
+              hover:border-slate-700"
+            >
+            <h3 class="text-2xl font-medium">
+              CRM Application
+            </h3>
+            <p class="mt-4 text-slate-400 leading-7">
+              A full-stack CRM application built with Django,
+              PostgreSQL and cloud infrastructure.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-6">
+              <span
+                class="rounded-full
+                  bg-slate-800
+                  px-3 py-1
+                  text-sm
+                  text-slate-300"
+              >
+                Python
+              </span>
+              <span
+                class="rounded-full
+                  bg-slate-800
+                  px-3 py-1
+                  text-sm
+                  text-slate-300"
+              >
+                Django
+              </span>
+                <span
+                  class="rounded-full
+                    bg-slate-800
+                    px-3 py-1
+                    text-sm
+                    text-slate-300"
+                >
+                  PostgreSQL
+                </span>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div
+            class="rounded-2xl
+              border border-slate-800
+              bg-slate-900/40
+              backdrop-blur-sm
+              p-8
+              transition
+              duration-300
+              hover:-translate-y-1
+              hover:border-slate-700"
+            >
+            <h3 class="text-2xl font-medium">
+              Portfolio Website
+            </h3>
+            <p class="mt-4 text-slate-400 leading-7">
+              This portfolio, built with Flask, Tailwind CSS
+              and Docker.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-6">
+              <span
+                class="rounded-full
+                  bg-slate-800
+                  px-3 py-1
+                  text-sm
+                  text-slate-300"
+              >
+                Flask
+              </span>
+              <span
+                class="rounded-full
+                  bg-slate-800
+                  px-3 py-1
+                  text-sm
+                  text-slate-300"
+              >
+                Tailwind
+              </span>
+              <span
+                class="rounded-full
+                  bg-slate-800
+                  px-3 py-1
+                  text-sm
+                  text-slate-300"
+              >
+                Docker
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="{{ url_for('static', filename='js/fadeAnimation.js') }}"></script>
 </body>
-
-
 </html>
