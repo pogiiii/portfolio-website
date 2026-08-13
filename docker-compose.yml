@@ -1,25 +1,10 @@
 services:
-
   flask:
     build: .
     ports:
       - "5000:5000"
     volumes:
       - .:/app
-      - node_modules:/app/node_modules
     command: flask --app run run --host=0.0.0.0 --debug
     environment:
       FLASK_DEBUG: "1"
-
-  tailwind:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    volumes:
-      - .:/app
-      - node_modules:/app/node_modules
-    command: npm run watch
-    restart: unless-stopped
-
-volumes:
-  node_modules:
