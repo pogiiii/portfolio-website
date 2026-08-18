@@ -1,8 +1,6 @@
 @import "tailwindcss";
 
-/* -----------------------------
-   Ambient background animation
-   ----------------------------- */
+@custom-variant dark (&:where(.dark, .dark *));
 
 @keyframes ambient-float {
     0%, 100% {
@@ -14,13 +12,13 @@
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .ambient-glow {
     animation: ambient-float 12s ease-in-out infinite;
 }
-
-/* -----------------------------
-   Scroll reveal animation
-   ----------------------------- */
 
 .fade-section {
     opacity: 0;
@@ -34,8 +32,6 @@
     opacity: 1;
     transform: translateY(0);
 }
-
-/* Respect users who prefer reduced motion */
 
 @media (prefers-reduced-motion: reduce) {
     .ambient-glow {
