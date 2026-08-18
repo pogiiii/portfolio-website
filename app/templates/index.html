@@ -7,7 +7,100 @@
     href="{{ url_for('static', filename='css/output.css') }}"
   >
 </head>
-<body class="font-sans bg-gray-900 text-slate-200">
+<body class="font-sans dark:bg-gray-900 dark:text-slate-200">
+  <header
+    class="fixed top-0 left-0 right-0 z-50
+      h-15
+      px-6
+      py-3
+      backdrop-blur-md"
+  >
+    <nav
+      class="max-w-5xl mx-auto
+        flex items-center justify-between"
+    >
+    <a
+      href="#home"
+      class="text-sm font-medium
+        text-slate-900 dark:text-slate-200
+        transition-opacity hover:opacity-60"
+    >
+      Prince Valencia
+    </a>
+    <div class="hidden md:flex items-center gap-8">
+      <a
+        href="#about"
+        class="text-sm text-slate-600 dark:text-slate-400
+          transition-colors
+          hover:text-slate-900 dark:hover:text-slate-200"
+      >
+        About
+      </a>
+      <a
+        href="#projects"
+        class="text-sm text-slate-600 dark:text-slate-400
+          transition-colors
+          hover:text-slate-900 dark:hover:text-slate-200"
+      >
+        Projects
+      </a>
+      <a
+        href="#contact"
+        class="text-sm text-slate-600 dark:text-slate-400
+          transition-colors
+          hover:text-slate-900 dark:hover:text-slate-200"
+      >
+        Contact
+      </a>
+    </div>
+    <button
+      id="theme-toggle"
+      type="button"
+      aria-label="Toggle dark mode"
+      class="flex items-center justify-center
+        size-9
+        rounded-full
+        text-slate-600 dark:text-slate-300
+        transition-colors
+        hover:bg-slate-200/50
+        dark:hover:bg-slate-800/50"
+      >
+        <svg
+          id="sun-icon"
+          class="hidden size-5"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          aria-hidden="true"
+        >
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2"></path>
+          <path d="M12 20v2"></path>
+          <path d="m4.93 4.93 1.41 1.41"></path>
+          <path d="m17.66 17.66 1.41 1.41"></path>
+          <path d="M2 12h2"></path>
+          <path d="M20 12h2"></path>
+          <path d="m6.34 17.66-1.41 1.41"></path>
+          <path d="m19.07 4.93-1.41 1.41"></path>
+        </svg>
+        <svg
+          id="moon-icon"
+          class="size-5"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          aria-hidden="true"
+          >
+            <path
+                d="M21 12.79A9 9 0 1 1 11.21 3
+                    7 7 0 0 0 21 12.79z"
+            ></path>
+          </svg>
+      </button>
+    </nav>
+  </header>
   <div
     class="fixed inset-0 -z-10 overflow-hidden pointer-events-none"
     aria-hidden="true"
@@ -17,25 +110,38 @@
       top-[-20%] left-[30%]
       size-[500px]
       rounded-full
-      bg-purple-500/20
+      bg-sky-200
+      dark:bg-purple-500/20
       blur-[120px]"
   ></div>
     <div
       class="absolute
-        top-[50%] right-[-10%]
+        top-[50%] right-[-20%]
         size-[400px]
         rounded-full
-        bg-blue-500/10
+        bg-mist-400
+        dark:bg-blue-500/10
+        blur-[120px]"
+    ></div>
+    <div
+      class="absolute
+        top-[80%] left-[-10%]
+        size-[300px]
+        rounded-full
+        bg-taupe-500
+        dark:bg-rose-500/20
         blur-[120px]"
     ></div>
   </div>
     <section
+      id="home"
       class="min-h-screen
         flex
         flex-col
         items-center
         justify-center
-        px-5"
+        px-5
+        scroll-mt-24"
     >
     <div class="text-center">
       <h1 class="text-5xl md:text-6xl font-medium tracking-tight">
@@ -47,7 +153,8 @@
           text-xl
           md:text-2xl
           font-light
-          text-slate-300"
+          text-slate-600 
+          dark:text-slate-400"
       >
         Full-Stack Developer building clean, practical
         web applications.
@@ -64,7 +171,7 @@
           class="transition-opacity duration-200 hover:opacity-60"
         >
           <svg
-            class="size-6 text-slate-200"
+            class="size-6 text-slate-600 dark:text-slate-400"
             viewBox="0 0 24 24"
             fill="currentColor"
             aria-hidden="true"
@@ -108,7 +215,7 @@
           class="transition-opacity duration-200 hover:opacity-60"
         >
           <svg
-            class="size-6 text-slate-200"
+            class="size-6 text-slate-600 dark:text-slate-400"
             viewBox="0 0 24 24"
             fill="currentColor"
             aria-hidden="true"
@@ -138,7 +245,7 @@
           class="transition-opacity duration-200 hover:opacity-60"
         >
           <svg
-            class="size-6 text-slate-200"
+            class="size-6 text-slate-600 dark:text-slate-400"
             viewBox="0 0 24 24"
             fill="currentColor"
             aria-hidden="true"
@@ -160,21 +267,23 @@
       </div>
     </section>
     <section
+      id="about"
       class="fade-section
         min-h-screen
         flex
         items-center
         justify-center
-        px-5"
+        px-5
+        scroll-mt-24"
     >
       <div class="max-w-2xl text-center">
-        <p class="text-sm uppercase tracking-[0.3em] text-slate-400">
+        <p class="text-sm uppercase tracking-[0.3em] text-slate-600 dark:text-slate-400">
             About Me
         </p>
         <h2 class="mt-4 text-4xl font-medium">
             Building things from backend to frontend.
         </h2>
-        <p class="mt-8 text-lg leading-8 text-slate-400">
+        <p class="mt-8 text-lg leading-8 text-slate-600 dark:text-slate-400">
           I'm a full-stack developer who enjoys building practical
           applications and working across the entire stack — from
           backend architecture and databases to frontend experiences.
@@ -182,19 +291,16 @@
       </div>
 
     </section>
-    <!--
-        ============================
-        Projects
-        ============================
-    -->
     <section
+      id="projects"
       class="fade-section
         min-h-screen
         px-5
-        py-32"
+        py-32
+        scroll-mt-24"
     >
       <div class="max-w-5xl mx-auto">
-        <p class="text-sm uppercase tracking-[0.3em] text-slate-400">
+        <p class="text-sm uppercase tracking-[0.3em] text-slate-600 dark:text-slate-400">
           Projects
         </p>
         <h2 class="mt-4 text-4xl font-medium">
@@ -204,8 +310,8 @@
           <!-- Project 1 -->
           <div
             class="rounded-2xl
-              border border-slate-800
-              bg-slate-900/40
+              border dark:border-slate-800
+              dark:bg-slate-900/40
               backdrop-blur-sm
               p-8
               transition
@@ -216,7 +322,7 @@
             <h3 class="text-2xl font-medium">
               CRM Application
             </h3>
-            <p class="mt-4 text-slate-400 leading-7">
+            <p class="mt-4 text-slate-600 dark:text-slate-400 leading-7">
               A full-stack CRM application built with Django,
               PostgreSQL and cloud infrastructure.
             </p>
@@ -253,8 +359,8 @@
           <!-- Project 2 -->
           <div
             class="rounded-2xl
-              border border-slate-800
-              bg-slate-900/40
+              border dark:border-slate-800
+              dark:bg-slate-900/40
               backdrop-blur-sm
               p-8
               transition
@@ -265,7 +371,7 @@
             <h3 class="text-2xl font-medium">
               Portfolio Website
             </h3>
-            <p class="mt-4 text-slate-400 leading-7">
+            <p class="mt-4 text-slate-600 dark:text-slate-400 leading-7">
               This portfolio, built with Flask, Tailwind CSS
               and Docker.
             </p>
@@ -302,6 +408,27 @@
         </div>
       </div>
     </section>
+    <section
+      id="contact"
+      class="fade-section min-h-screen flex items-center justify-center px-5c scroll-mt-24">
+      <div class="text-center">
+        <p class="text-sm uppercase tracking-[0.3em] text-slate-600 dark:text-slate-400">
+          Contact
+        </p>
+        <h2 class="mt-4 text-4xl font-medium">
+          Let's build something.
+        </h2>
+        <a
+          href="mailto:princevalencia0504@gmail.com"
+          class="inline-block mt-8
+            text-slate-600 dark:text-slate-300
+            underline underline-offset-4
+            transition-opacity hover:opacity-60"
+        >
+          Get in touch  
+        </a>
+    </div>
+</section>
     <script src="{{ url_for('static', filename='js/fadeAnimation.js') }}"></script>
 </body>
 </html>
